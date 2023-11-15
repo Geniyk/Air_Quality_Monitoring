@@ -1,12 +1,12 @@
-#define BLYNK_TEMPLATE_ID "TMPL3RyI6W0Az"
-#define BLYNK_TEMPLATE_NAME "Air Quality"
-#define BLYNK_AUTH_TOKEN "ysCfDQtWW_CIZzZHVEQ6J_NFSYJx2lxB"
+#define BLYNK_TEMPLATE_ID "TMPL3RyI6W0Az" //YOUR BLYNK_TEMPLATE_ID
+#define BLYNK_TEMPLATE_NAME "Air Quality" //YOUR BLYNK_TEMPLATE_NAME
+#define BLYNK_AUTH_TOKEN "ysCfDQtWW_CIZzZHVEQ6J_NFSYJx2lxB" //YOUR BLYNK_AUTH_TOKEN
 
 char auth[] = "ysCfDQtWW_CIZzZHVEQ6J_NFSYJx2lxB";
 // Your WiFi credentials.
 // Set password to "" for open networks.
-char ssid[] = "Redmi5G";
-char pass[] = "123456788";
+char ssid[] = "*****"; //YOUR HOTSPOT NAME
+char pass[] = "******"; //YOUR HOTSPOT PASSWORD
 
 #define BLYNK_PRINT Serial
 
@@ -89,7 +89,7 @@ void sendGps()
   }
 
   if(gasValue > 400){
-    Blynk.email("saurabhkrchauhan1402@gmail.com", "Alert", "Bad Air,Stay Inside!!");
+    Blynk.email("YOUR EMAIL", "Alert", "Bad Air,Stay Inside!!");
     Blynk.logEvent("pollution_alert","Bad Air, Stay Inside!! Latitude = " + String(latitude, 6) + "Longitude = " + String(longitude, 6));
   }
 
